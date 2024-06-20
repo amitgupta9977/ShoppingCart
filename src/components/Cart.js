@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCart, removeItem, incrementItem, decrementItem } from '../store/slices/cartSlice';
 
-
+//amit gupta
 const Cart = () => {
 
     const { isCartOpen, cartItems } = useSelector((state) => state.cart);
