@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import { Provider } from "react-redux";
 import store from "./store/store";
+//commented the code
 
 const App = () => {
   return (
