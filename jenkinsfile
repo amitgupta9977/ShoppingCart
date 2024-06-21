@@ -8,17 +8,28 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/amitgupta9977/React-js.git', branch: 'main'
+                git url: 'https://github.com/amitgupta9977/ShoppingCart.git', branch: 'main'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install' // Install npm dependencies
+                sh 'bundle install' // Install Ruby gems
+            }
+        }
+        stage('Build Jekyll Site') {
+            steps {
+                sh 'bundle exec jekyll build' // Build the Jekyll site
             }
         }
         stage('Build') {
             steps {
-                sh './npm build' // Replace with your build command
+                sh 'npm run build' // Build the React project
             }
         }
         stage('Test') {
             steps {
-                sh './npm test' // Replace with your test command
+                sh 'npm test' // Run tests
             }
         }
     }
