@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      {/* Rest of your app content */}
+      {/* Rest of your app content  likh do*/}
     </div>
   );
 };
