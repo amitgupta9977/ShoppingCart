@@ -8,17 +8,22 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/your-repo.git', branch: 'main'
+                git url: 'https://github.com/amitgupta9977/React-js.git', branch: 'main'
+            }
+        }
+        stage('Install') {
+            steps {
+                sh 'npm install' // Install dependencies
             }
         }
         stage('Build') {
             steps {
-                sh './gradlew build' // Replace with your build command
+                sh 'npm run build' // Build the project
             }
         }
         stage('Test') {
             steps {
-                sh './gradlew test' // Replace with your test command
+                sh 'npm test' // Run tests
             }
         }
     }
