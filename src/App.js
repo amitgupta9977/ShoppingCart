@@ -1,24 +1,14 @@
-import React from 'react';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Footer from './components/Footer';
-import Cart from './components/Cart';
-import { Provider } from 'react-redux';
-import store from './store/store';
-
+import React from "react";
+import Header from "./components/Header";
+import "./index.css";
 
 const App = () => {
   return (
-    <>
-      <Provider store={store}>
-        <Header />
-        <Home />
-        <Footer />
-        <Cart />
-      </Provider>
-    </>
+    <div className="app">
+      <Header />
+      {/* Rest of your app content */}
+    </div>
   );
 };
 
 export default App;
-
